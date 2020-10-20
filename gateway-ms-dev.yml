@@ -1,9 +1,8 @@
-gateway-ms:
-  server:
-    port: 8088
+#gateway-ms:
+#  server:
+#    port: 8088
 
-spring:
-
+#spring:
 #  sleuth:
 #    trace-id128: true
 #    sampler:

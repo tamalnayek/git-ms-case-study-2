@@ -2,32 +2,27 @@
 #  server:
 #    port: 8088
 
-#spring:
-#  sleuth:
-#    trace-id128: true
-#    sampler:
-#      probability: 0.1
-#  zipkin:
-#    enabled: true
-#    base-url: ${gateway-api.zipkin.base-url:http://localhost:9411/}
-#  cloud:
-#    bus:
-#      destination: ${gateway-api.cloud.bus.destination:OnlineDataExchange}
+spring:
+  sleuth:
+    trace-id128: true
+    sampler:
+      probability: 1.0
+  zipkin:
+    enabled: true
+    base-url: http://zipkin:9411/
+  cloud:
+    bus:
+      destination: OnlineGrocery
     
-#  rabbitmq:
-#    host: ${gatewayapi.rabbitmq.host:192.168.99.100}
-#    port: 5672
+  rabbitmq:
+    host: rabbitmq-master
+    port: 5672
 
-#  application:
-#    name: gateway-ms
-#  profiles:
-#    active:
-#    - dev
 
 security:
   oauth2:
     resource:
-      token-info-uri: http://localhost:8766/auth/oauth/check_token
+      token-info-uri: http://auth-server:8766/auth/oauth/check_token
     client:
       client-id: web
       client-secret: webpass
@@ -94,5 +89,6 @@ logging.level:
   org.springframework.security: DEBUG
 #  org.springframework.web.reactive.function.client: TRACE
 
+#gateway-ms.server.port:8088
 
 

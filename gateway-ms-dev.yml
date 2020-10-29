@@ -39,6 +39,10 @@ gateway-ms:
        zone: TAM
 
 zuul:
+  ribbon:
+    eager-load:
+      enabled: true
+      
   sensitive-headers:
   - Cookie
   - Set-Cookie

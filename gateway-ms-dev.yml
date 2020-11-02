@@ -22,7 +22,7 @@ spring:
 security:
   oauth2:
     resource:
-      token-info-uri: http://192.168.56.102:30518/auth/oauth/check_token
+      token-info-uri: http://192.168.56.101:30518/auth/oauth/check_token
     client:
       client-id: web
       client-secret: webpass
